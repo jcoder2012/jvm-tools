@@ -25,6 +25,13 @@
         <artifactId>jackson-core-asl</artifactId>
         <version>1.9.6</version>
       </dependency>
+      <dependency>
+        <groupId>sun.jdk</groupId>
+        <artifactId>sa-jdi</artifactId>
+        <version>1.0.0</version>
+        <scope>system</scope>
+        <systemPath>${JAVA_HOME}/lib/sa-jdi.jar</systemPath>
+      </dependency>
   </dependencies>
   <build>
     <plugins>

@@ -25,6 +25,8 @@ public class Tool {
             new VirtualMachines().run();
         } else if ("stack".equals(cmd)) {
             sun.tools.jstack.JStack.main(sublist(args, 1));
+        } else if ("threadnids".equals(cmd)) {
+            ThreadNativeIds.main(sublist(args, 1));
         } else {
             printUsageAndExit();
         }
@@ -45,6 +47,7 @@ public class Tool {
         System.err.println("  gc <pid>");
         System.err.println("  ps");
         System.err.println("  stack <pid>");
+        System.err.println("  threadnids <pid>");
         System.exit(1);
     }
 

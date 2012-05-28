@@ -2,7 +2,6 @@
 package org.gridkit.util.monitoring;
 
 import java.io.IOException;
-import java.io.StringWriter;
 import java.lang.reflect.Array;
 import java.util.Iterator;
 import java.util.Set;
@@ -44,8 +43,6 @@ public class JmxReporter {
         System.out.println();
         System.out.flush();
     }
-    
-    
 
     private static void listBeans(JsonGenerator jg, MBeanServerConnection mBeanServer) throws Exception {
         Set<ObjectName> names = null;

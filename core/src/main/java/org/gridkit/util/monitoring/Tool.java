@@ -42,12 +42,16 @@ public class Tool {
 
     static void printUsageAndExit() {
         System.err.println("Usage: ");
-        System.err.println("  jmx <pid>");
-        System.err.println("  top <pid>");
-        System.err.println("  gc <pid>");
-        System.err.println("  ps");
-        System.err.println("  stack <pid>");
-        System.err.println("  threadnids <pid>");
+        System.err.println("  jmx <pid>           (+)");
+        System.err.println("  top <pid>           (+)");
+        System.err.println("  gc <pid>            (+)");
+        System.err.println("  ps                  (+)");
+        System.err.println("  stack <pid>         (+)");
+        System.err.println("  threadnids <pid>    (*)");
+        System.err.println("");
+        System.err.println("(+) Will load tools.jar; may require running as user who owns pid.");
+        System.err.println("(*) Will load sd-jdi.jar; may require running as root.");
+
         System.exit(1);
     }
 

@@ -8,6 +8,13 @@ Build
 
     $ mvn install
 
+Development
+-----------
+
+If developing in Eclipse, you'll need to add the
+'tools' jar manually to your build path.
+(TODO: make mvn eclipse:eclipse do it magically?)
+
 Usage
 -----
 

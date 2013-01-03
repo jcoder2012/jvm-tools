@@ -36,11 +36,18 @@
                 <includes>
                   <include>org.gridkit.jrep:*</include>
                   <include>org.codehaus.jackson:*</include>
+                  <include>org.ow2.asm:*</include>
                 </includes>
               </artifactSet>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <mainClass>org.gridkit.util.monitoring.Tool</mainClass>
+                  <manifestEntries>
+                    <Premain-Class>org.cloudera.jvmtools.AgentMain</Premain-Class>
+                    <Agent-Class>org.cloudera.jvmtools.AgentMain</Agent-Class>
+                    <Can-Redefine-Classes>true</Can-Redefine-Classes>
+                    <Can-Retransform-Classes>true</Can-Retransform-Classes>
+                  </manifestEntries>
                 </transformer>
               </transformers>
             </configuration>

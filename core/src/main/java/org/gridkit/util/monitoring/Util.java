@@ -16,7 +16,7 @@ import javax.management.remote.JMXServiceURL;
 import com.sun.tools.attach.VirtualMachine;
 
 public class Util {
-    static void addToolsToClasspath() {
+    public static void addToolsToClasspath() {
       addToolJarToClasspath("tools");
     }
     

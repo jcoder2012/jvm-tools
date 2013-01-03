@@ -40,6 +40,7 @@ public class JmxReporter {
         listBeans(jg, jmx);
         jg.writeEndObject();
         jg.close();
+        System.out.flush();
         System.out.println();
         System.out.flush();
     }

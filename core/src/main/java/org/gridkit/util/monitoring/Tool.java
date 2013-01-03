@@ -1,6 +1,8 @@
 // Copyright (c) 2012 Cloudera, Inc. All rights reserved.
 package org.gridkit.util.monitoring;
 
+import org.cloudera.jvmtools.AttachSelf;
+
 
 /**
  * Main class to invoke other tools.
@@ -27,6 +29,8 @@ public class Tool {
             sun.tools.jstack.JStack.main(sublist(args, 1));
         } else if ("threadnids".equals(cmd)) {
             ThreadNativeIds.main(sublist(args, 1));
+        } else if ("agent".equals(cmd)) {
+            AttachSelf.main(sublist(args, 1));
         } else {
             printUsageAndExit();
         }
@@ -48,6 +52,7 @@ public class Tool {
         System.err.println("  ps                  (+)");
         System.err.println("  stack <pid>         (+)");
         System.err.println("  threadnids <pid>    (*)");
+        System.err.println("  agent <pid>         (+)");
         System.err.println("");
         System.err.println("(+) Will load tools.jar; may require running as user who owns pid.");
         System.err.println("(*) Will load sd-jdi.jar; may require running as root.");
